@@ -15,3 +15,9 @@ node_modules
 
 # Hardhat Ignition default folder for deployments against a local node
 ignition/deployments/chain-31337
+
+# Local signing credentials
+.env
+.env.local
+.env.*.local
+.foundry/
