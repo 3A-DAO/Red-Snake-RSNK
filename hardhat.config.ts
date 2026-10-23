@@ -1,3 +1,4 @@
+import { loadPrivateKey } from './security/foundry-keystore.js';
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 // import "@nomiclabs/hardhat-etherscan";
@@ -18,12 +19,12 @@ const config: HardhatUserConfig = {
     redbelly: {
       url: process.env.MAINNET_RPC_URL || "",
       accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+        loadPrivateKey('PRIVATE_KEY', false) !== undefined ? [loadPrivateKey('PRIVATE_KEY', false)] : [],
     },
     redbelly_testnet: {
       url: process.env.TESTNET_RPC_URL || "",
       accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+        loadPrivateKey('PRIVATE_KEY', false) !== undefined ? [loadPrivateKey('PRIVATE_KEY', false)] : [],
     },
   },
   etherscan: {

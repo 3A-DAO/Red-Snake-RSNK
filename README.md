@@ -1,3 +1,5 @@
+> Operational signing now uses encrypted Foundry keystores. Follow [KEYSTORE_MIGRATION.md](KEYSTORE_MIGRATION.md); older raw private key environment instructions below are superseded.
+
 # RedSnake Token (RSNK)
 
 RedSnake (RSNK) is an ERC20 token implemented using OpenZeppelin's ERC20 standard. The token has a total supply of 8,888,888,888 RSNK with 18 decimals.
